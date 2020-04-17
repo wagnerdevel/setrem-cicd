@@ -4,9 +4,9 @@ steps:
   - name: slack
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: https://hooks.slack.com/services/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
       channel: logs
-      username: drone
+      username: webhookbot
   - name: test
     image: golang:1.10-alpine
     commands:
