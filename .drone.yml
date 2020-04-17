@@ -4,7 +4,7 @@ steps:
   - name: notify
     image: plugins/slack
     settings:
-      webhook: slack_hook
+      webhook: ${slack_hook}
       channel: logs
       username: webhookbot
   - name: test
