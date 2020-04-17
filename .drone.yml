@@ -1,10 +1,10 @@
 kind: pipeline
 name: default
 steps:
-  - name: slack
+  - name: notify
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: slack_hook
       channel: logs
       username: webhookbot
   - name: test
