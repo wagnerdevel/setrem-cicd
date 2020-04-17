@@ -5,7 +5,7 @@ steps:
     image: plugins/slack
     settings:
       webhook: https://hooks.slack.com/services/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
-      channel: logs
+      channel: \#logs
       username: webhookbot
   - name: test
     image: golang:1.10-alpine
