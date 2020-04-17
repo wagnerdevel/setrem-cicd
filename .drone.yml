@@ -8,9 +8,9 @@ steps:
   - name: notify
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: https://hooks.slack.com/services/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
       channel: deployment
-      username: Drone
+      username: webhookbot
   - name: build
     image: golang:1.10-alpine
     commands:
