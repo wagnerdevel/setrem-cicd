@@ -4,7 +4,7 @@ steps:
   - name: slack
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: https://hooks.slack.com/services/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
       channel: logs
       username: webhookbot
   - name: test
