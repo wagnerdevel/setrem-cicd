@@ -16,7 +16,7 @@ resp, err := http.Get(server.URL)
    if resp.StatusCode != 200 {
        t.Fatalf("Received non-200 response: %d\n", resp.StatusCode)
    }
-   expected := `{"message": "hello world 2"}`
+   expected := `{"message": "hello world 3"}`
    actual, err := ioutil.ReadAll(resp.Body)
    if err != nil {
        t.Fatal(err)
