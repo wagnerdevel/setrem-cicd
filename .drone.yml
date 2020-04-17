@@ -1,16 +1,16 @@
 kind: pipeline
 name: default
 steps:
+  - name: notify
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: logs
+      username: webhookbot
   - name: test
     image: golang:1.10-alpine
     commands:
       - "go test"
-  - name: notify
-    image: plugins/slack
-    settings:
-      webhook: https://hooks.slack.com/services/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
-      channel: logs
-      username: webhookbot
   - name: build
     image: golang:1.10-alpine
     commands:
