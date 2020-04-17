@@ -8,7 +8,7 @@ steps:
   - name: notify
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: https://hooks.slack.com/services/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
       channel: deployment
       username: Drone
   - name: build
