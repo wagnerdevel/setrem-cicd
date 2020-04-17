@@ -1,19 +1,6 @@
 kind: pipeline
 name: default
 steps:
-  - name: notify
-    image: plugins/slack
-    settings:
-      webhook:
-        from_secret: slack_hook
-      channel: logs
-      username: webhookbot
-      template: >
-        {{#success build.status}}
-          build {{build.number}} succeeded. Good job.
-        {{else}}
-          build {{build.number}} failed. Fix me please.
-        {{/success}}
   - name: test
     image: golang:1.10-alpine
     commands:
@@ -42,3 +29,16 @@ steps:
         from_secret: k8s_token
     commands:
       - kubectl apply -f deployment.yml
+  - name: notify
+    image: plugins/slack
+    settings:
+      webhook:
+        from_secret: slack_hook
+      channel: logs
+      username: webhookbot
+      template: >
+        {{#success build.status}}
+          build {{build.number}} succeeded. Good job.
+        {{else}}
+          build {{build.number}} failed. Fix me please.
+        {{/success}}
