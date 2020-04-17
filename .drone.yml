@@ -18,13 +18,12 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-  - notify:
+  - name: notify
     image: plugins/slack
-    webhook: https://hooks.slack.com/services/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
-    channel: deployment
-    username: DroneCI
-    when:
-      status: success
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: deployment
+      username: Drone
   - name: delivery
     image: sinlead/drone-kubectl
     settings:
