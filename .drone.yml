@@ -4,7 +4,7 @@ steps:
   - name: slack
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: https://hooks.slack.com/services/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
       channel: logs
       username: drone
   - name: test
