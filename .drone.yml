@@ -5,6 +5,12 @@ steps:
     image: golang:1.10-alpine
     commands:
       - "go test"
+  - name: notify
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: deployment
+      username: Drone
   - name: build
     image: golang:1.10-alpine
     commands:
@@ -18,12 +24,6 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-  - name: notify
-    image: plugins/slack
-    settings:
-      webhook: https://hooks.slack.com/services/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
-      channel: deployment
-      username: Drone
   - name: delivery
     image: sinlead/drone-kubectl
     settings:
