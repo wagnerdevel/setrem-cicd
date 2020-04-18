@@ -327,4 +327,4 @@ Os resultados obtidos são apresentados nas imagens abaixo.
 
 ![App e teste](https://raw.githubusercontent.com/wagnerdevel/setrem-cicd/master/screens/screen-3.png?raw=true)
 
-![App e teste](https://raw.githubusercontent.com/wagnerdevel/setrem-cicd/master/screens/screen-1.png?raw=true)
+![App e teste](https://raw.githubusercontent.com/wagnerdevel/setrem-cicd/master/screens/screen-4.png?raw=true)
